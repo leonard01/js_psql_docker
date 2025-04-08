@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Insert Key-Value</title>
+    <title>Insert, Search, Update & Delete Key-Value</title>
   </head>
   <body>
     <h1>Insert Key-Value</h1>
@@ -10,17 +10,47 @@
       <label for="key">Key:</label>
       <input type="text" name="key" id="key" required />
       <br><br>
-      
       <label for="value">Value:</label>
       <input type="text" name="value" id="value" required />
       <br><br>
-      
       <button type="submit">Insert</button>
     </form>
-    
-    <hr>
 
-    <!-- Button to show all key-value pairs (via GET /list) -->
+    <hr />
+
+    <h2>Search by Key (partial match)</h2>
+    <form method="POST" action="/search">
+      <label for="searchKey">Key:</label>
+      <input type="text" name="searchKey" id="searchKey" required />
+      <button type="submit">Search</button>
+    </form>
+
+    <hr />
+
+    <h2>Update Value by Key</h2>
+    <form method="POST" action="/update">
+      <label for="updateKey">Existing Key:</label>
+      <input type="text" name="updateKey" id="updateKey" required />
+      <br><br>
+      <label for="newValue">New Value:</label>
+      <input type="text" name="newValue" id="newValue" required />
+      <br><br>
+      <button type="submit">Update</button>
+    </form>
+
+    <hr />
+
+    <h2>Delete Key-Value Pair</h2>
+    <form method="POST" action="/delete">
+      <label for="deleteKey">Key to Delete:</label>
+      <input type="text" name="deleteKey" id="deleteKey" required />
+      <br><br>
+      <button type="submit">Delete</button>
+    </form>
+
+    <hr />
+
+    <!-- Link to show all records -->
     <form method="GET" action="/list">
       <button type="submit">Show All Key-Value Pairs</button>
     </form>
