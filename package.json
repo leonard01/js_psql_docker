@@ -1,0 +1,14 @@
+{
+    "name": "my-docker-compose-project",
+    "version": "1.0.0",
+    "description": "Example Node.js & PostgreSQL project using Docker Compose",
+    "main": "src/index.js",
+    "scripts": {
+      "start": "node src/index.js"
+    },
+    "dependencies": {
+      "express": "^4.18.2",
+      "pg": "^8.7.3"
+    }
+  }
+  
